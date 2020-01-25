@@ -80,7 +80,8 @@ d3.csv("assets/data/data.csv").then(function(hcdata) {
     // .text(d => d.abbr)
 
     // https://www.dashingd3js.com/svg-text-element
-    var textLabels = chartGroup.selectAll("text")
+    // https://stackoverflow.com/questions/45189740/insert-text-inside-circle-in-d3-chart
+    var textLabels = chartGroup.selectAll(null)
     .data(hcdata)
     .enter()
     .append("text")
